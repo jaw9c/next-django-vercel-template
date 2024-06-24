@@ -7,7 +7,8 @@
     "dev": "concurrently \"yarn next dev\" \"yarn django-dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "vercel-build": "python manage.py migrate && next build"
   },
   "dependencies": {
     "@vercel/postgres": "^0.9.0",

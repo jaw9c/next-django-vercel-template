@@ -3,6 +3,10 @@
     {
       "src": "/api/(.*)",
       "dest": "api/wsgi.py"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "index.html"
     }
   ]
 }

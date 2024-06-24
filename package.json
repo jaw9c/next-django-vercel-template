@@ -1,4 +1,34 @@
 {
+  "name": "botparty",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "django-dev": "python manage.py runserver",
+    "dev": "concurrently \"yarn next dev\" \"yarn django-dev\"",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@vercel/postgres": "^0.9.0",
+    "concurrently": "^8.2.2",
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
+  },
   "engines": {
     "node": "18.x"
   }

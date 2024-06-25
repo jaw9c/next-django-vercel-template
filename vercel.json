@@ -5,7 +5,7 @@
   ],
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/api(.*)",
       "dest": "api/wsgi.py"
     },
     { "src": "/.*", "dest": "./*" }

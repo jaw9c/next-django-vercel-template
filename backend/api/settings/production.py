@@ -13,10 +13,3 @@ if DATABASE_URL:
             conn_health_checks=True,
         ),
     }
-else:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': 'db.sqlite3',
-        }
-    }

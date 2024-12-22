@@ -6,9 +6,10 @@ DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY')
 DATABASE_URL= os.environ.get('DATABASE_URL')
 
-DATABASES = {
-    'default': dj_database_url.config(
-        conn_max_age=600,
-        conn_health_checks=True,
-    ),
-}
+if DATABASE_URL:
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            conn_health_checks=True,
+        ),
+    }

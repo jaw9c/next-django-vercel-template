@@ -1,8 +1,8 @@
 {
   "builds": [
-    { "src": "backend/api/wsgi.py", "use": "@vercel/python", "config": {
+    { "src": "backend/requirements.txt", "use": "@vercel/python", "config": {
       "excludeFiles":  "{.next,*.cache,node_modules,public,app}/**",
-      "root": "backend"
+      "pythonEnv": "backend/venv/bin/activate"
     } },
     { "src": "package.json", "use": "@vercel/next", "config": {
       "excludeFiles":  "{backend}/**"

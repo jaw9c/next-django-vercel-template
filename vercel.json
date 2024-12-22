@@ -1,12 +1,16 @@
 {
   "builds": [
-    { "src": "api/wsgi.py", "use": "@vercel/python" },
-    { "src": "package.json", "use": "@vercel/next" }
+    { "src": "backend/api/wsgi.py", "use": "@vercel/python", "config": {
+      "excludeFiles":  "{.next,*.cache,node_modules,public,app}/**"
+    } },
+    { "src": "package.json", "use": "@vercel/next", "config": {
+      "excludeFiles":  "{backend}/**"
+    } }
   ],
   "routes": [
     {
       "src": "/api(.*)",
-      "dest": "api/wsgi.py"
+      "dest": "backend/api/wsgi.py"
     },
     { "src": "/.*", "dest": "./*" }
   ]

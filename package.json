@@ -3,12 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "django-dev": "python manage.py runserver",
+    "django-dev": "python backend/manage.py runserver",
     "dev": "concurrently \"yarn next dev\" \"yarn django-dev\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "vercel-build": "next build && pip3 install -r requirements.txt && python3 manage.py migrate"
+    "vercel-build": "next build && pip3 install -r backend/requirements.txt && python3 backend/manage.py migrate"
   },
   "dependencies": {
     "@vercel/postgres": "^0.9.0",

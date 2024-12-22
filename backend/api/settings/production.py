@@ -1,6 +1,5 @@
 from .base import *
 import os
-import dj_database_url
 
 DEBUG = True
 SECRET_KEY = os.environ.get('SECRET_KEY')
